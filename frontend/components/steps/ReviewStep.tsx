@@ -5,23 +5,23 @@ const ReviewStep: React.FC = () => {
     const { formData } = useWizardStore();
 
     return (
-        <div className="space-y-6">
-            <h2 className="text-2xl font-bold text-gray-800">Review Your Information</h2>
-            <p className="text-gray-600">Please check that the details below are correct.</p>
+        <div className="space-y-8 max-w-lg mx-auto">
+            <h2 className="text-2xl font-bold text-slate-800">Review Your Information</h2>
+            <p className="text-slate-600">Please check that the details below are correct.</p>
 
-            <div className="bg-gray-50 p-6 rounded-lg border space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-inner space-y-4">
+                <div className="grid grid-cols-2 gap-6">
                     <div>
-                        <p className="text-sm text-gray-500">Business Name</p>
-                        <p className="font-medium text-gray-900">{formData.businessName || 'Not provided'}</p>
+                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Business Name</p>
+                        <p className="font-medium text-slate-900 text-lg">{formData.businessName || 'Not provided'}</p>
                     </div>
                     <div>
-                        <p className="text-sm text-gray-500">Structure</p>
-                        <p className="font-medium text-gray-900 capitalize">{formData.structure?.replace('-', ' ') || 'Not selected'}</p>
+                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Structure</p>
+                        <p className="font-medium text-slate-900 capitalize text-lg">{formData.structure?.replace('-', ' ') || 'Not selected'}</p>
                     </div>
-                    <div className="col-span-2">
-                        <p className="text-sm text-gray-500">Industry</p>
-                        <p className="font-medium text-gray-900">{formData.industry || 'Not provided'}</p>
+                    <div className="col-span-2 pt-4 border-t border-slate-200">
+                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Industry</p>
+                        <p className="font-medium text-slate-900">{formData.industry || 'Not provided'}</p>
                     </div>
                 </div>
             </div>
