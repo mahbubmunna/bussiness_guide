@@ -32,13 +32,13 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                 </div>
 
                 {/* Footer / Navigation */}
-                <div className="p-6 bg-gray-50 border-t flex justify-between">
+                <div className="p-6 bg-slate-50 border-t border-slate-100 flex justify-between">
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 0}
-                        className={`px-4 py-2 rounded-md font-medium transition-colors ${currentStep === 0
-                            ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                            : 'bg-white border border-gray-300 text-gray-700 hover:bg-gray-50'
+                        className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-200 ${currentStep === 0
+                                ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                                : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow-sm hover:shadow'
                             }`}
                     >
                         Back
@@ -46,7 +46,7 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                     <button
                         onClick={nextStep}
                         disabled={currentStep === totalSteps - 1} // Review step might be final for now
-                        className="px-4 py-2 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition-colors"
+                        className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 shadow-md shadow-blue-500/20 active:scale-[0.98]"
                     >
                         {currentStep === totalSteps - 1 ? 'Finish' : 'Next'}
                     </button>
