@@ -11,9 +11,17 @@ const config: Config = {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                slate: {
+                    850: '#1e293b', // Custom deeper slate
+                }
             },
+            fontFamily: {
+                sans: ['var(--font-inter)', 'sans-serif'],
+            }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 };
 export default config;
