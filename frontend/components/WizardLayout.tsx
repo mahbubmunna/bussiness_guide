@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useWizardStore } from '@/store/wizardStore';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface WizardLayoutProps {
     children: React.ReactNode;
@@ -36,19 +37,21 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 0}
-                        className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-200 ${currentStep === 0
-                                ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                                : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 shadow-sm hover:shadow'
+                        className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold transition-all duration-200 ${currentStep === 0
+                            ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
+                            : 'bg-white border-2 border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 shadow-sm hover:shadow'
                             }`}
                     >
+                        <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
                         Back
                     </button>
                     <button
                         onClick={nextStep}
-                        disabled={currentStep === totalSteps - 1} // Review step might be final for now
-                        className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-200 shadow-md shadow-blue-500/20 active:scale-[0.98]"
+                        disabled={currentStep === totalSteps - 1}
+                        className="flex items-center gap-2 px-8 py-2.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-blue-500/30 active:scale-[0.98]"
                     >
                         {currentStep === totalSteps - 1 ? 'Finish' : 'Next'}
+                        <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
                     </button>
                 </div>
             </div>
