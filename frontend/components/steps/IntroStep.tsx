@@ -16,10 +16,10 @@ const IntroStep: React.FC = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                <div className="p-4 rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow transition-shadow">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left mt-8">
+                <div className="p-5 rounded-xl border border-slate-100 bg-white shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-100 group">
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 bg-indigo-50 rounded-lg text-indigo-600"><Landmark className="w-5 h-5" /></div>
+                        <div className="p-2 bg-indigo-50 rounded-lg text-indigo-600 group-hover:bg-indigo-100 transition-colors"><Landmark className="w-5 h-5" /></div>
                         <h3 className="font-semibold text-slate-900">Structure</h3>
                     </div>
                     <p className="text-sm text-slate-500">LLC, Sole Prop, or Corp selection guide.</p>
