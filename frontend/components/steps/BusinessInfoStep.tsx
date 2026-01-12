@@ -1,5 +1,6 @@
 import React from 'react';
 import { useWizardStore } from '@/store/wizardStore';
+import { Building2, Briefcase, FileText } from 'lucide-react';
 
 const BusinessInfoStep: React.FC = () => {
     const { formData, updateFormData } = useWizardStore();
@@ -14,7 +15,10 @@ const BusinessInfoStep: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="md:col-span-2">
-                    <label htmlFor="businessName" className="block text-sm font-semibold text-slate-700 mb-2">Business Name</label>
+                    <label htmlFor="businessName" className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                        <Building2 className="w-4 h-4 text-slate-400" />
+                        Business Name
+                    </label>
                     <input
                         type="text"
                         id="businessName"
@@ -27,7 +31,10 @@ const BusinessInfoStep: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="structure" className="block text-sm font-semibold text-slate-700 mb-2">Business Structure</label>
+                    <label htmlFor="structure" className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                        <FileText className="w-4 h-4 text-slate-400" />
+                        Structure
+                    </label>
                     <select
                         id="structure"
                         name="structure"
@@ -35,7 +42,7 @@ const BusinessInfoStep: React.FC = () => {
                         onChange={handleChange}
                         className="mt-1 block w-full rounded-lg border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border bg-white"
                     >
-                        <option value="">Select a structure...</option>
+                        <option value="">Select...</option>
                         <option value="sole-proprietorship">Sole Proprietorship</option>
                         <option value="llc">LLC</option>
                         <option value="corporation">Corporation</option>
@@ -43,7 +50,10 @@ const BusinessInfoStep: React.FC = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="industry" className="block text-sm font-semibold text-slate-700 mb-2">Industry</label>
+                    <label htmlFor="industry" className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                        <Briefcase className="w-4 h-4 text-slate-400" />
+                        Industry
+                    </label>
                     <input
                         type="text"
                         id="industry"
@@ -51,7 +61,7 @@ const BusinessInfoStep: React.FC = () => {
                         value={formData.industry || ''}
                         onChange={handleChange}
                         className="mt-1 block w-full rounded-lg border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border transition-colors hover:border-blue-300"
-                        placeholder="Technology, Retail..."
+                        placeholder="Retail..."
                     />
                 </div>
             </div>
