@@ -12,8 +12,8 @@ const BusinessInfoStep: React.FC = () => {
         <div className="space-y-8 max-w-lg mx-auto">
             <h2 className="text-2xl font-bold text-slate-800 border-b pb-4">Basic Business Information</h2>
 
-            <div className="space-y-6">
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="md:col-span-2">
                     <label htmlFor="businessName" className="block text-sm font-semibold text-slate-700 mb-2">Business Name</label>
                     <input
                         type="text"
@@ -50,8 +50,8 @@ const BusinessInfoStep: React.FC = () => {
                         name="industry"
                         value={formData.industry || ''}
                         onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 border"
-                        placeholder="Technology, Retail, Consulting..."
+                        className="mt-1 block w-full rounded-lg border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border transition-colors hover:border-blue-300"
+                        placeholder="Technology, Retail..."
                     />
                 </div>
             </div>
