@@ -1,27 +1,37 @@
 import React from 'react';
 import { useWizardStore } from '@/store/wizardStore';
+import { CheckCircle2, Building, Briefcase } from 'lucide-react';
 
 const ReviewStep: React.FC = () => {
     const { formData } = useWizardStore();
 
     return (
         <div className="space-y-8 max-w-lg mx-auto">
-            <h2 className="text-2xl font-bold text-slate-800">Review Your Information</h2>
+            <h2 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                <CheckCircle2 className="w-6 h-6 text-emerald-500" />
+                Review Your Information
+            </h2>
             <p className="text-slate-600">Please check that the details below are correct.</p>
 
-            <div className="bg-slate-50 p-6 rounded-xl border border-slate-200 shadow-inner space-y-4">
-                <div className="grid grid-cols-2 gap-6">
-                    <div>
-                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Business Name</p>
-                        <p className="font-medium text-slate-900 text-lg">{formData.businessName || 'Not provided'}</p>
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-blue-50 rounded-full"><Building className="w-5 h-5 text-blue-600" /></div>
+                        <div>
+                            <p className="text-xs uppercase tracking-wide text-slate-500 font-bold mb-1">Business Identity</p>
+                            <p className="font-semibold text-slate-900 text-lg">{formData.businessName || 'Not provided'}</p>
+                            <p className="text-slate-500 capitalize text-sm mt-1">{formData.structure?.replace('-', ' ') || 'No structure selected'}</p>
+                        </div>
                     </div>
-                    <div>
-                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Structure</p>
-                        <p className="font-medium text-slate-900 capitalize text-lg">{formData.structure?.replace('-', ' ') || 'Not selected'}</p>
-                    </div>
-                    <div className="col-span-2 pt-4 border-t border-slate-200">
-                        <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-1">Industry</p>
-                        <p className="font-medium text-slate-900">{formData.industry || 'Not provided'}</p>
+
+                    <div className="w-full h-px bg-slate-100" />
+
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-indigo-50 rounded-full"><Briefcase className="w-5 h-5 text-indigo-600" /></div>
+                        <div>
+                            <p className="text-xs uppercase tracking-wide text-slate-500 font-bold mb-1">Sector</p>
+                            <p className="font-medium text-slate-900">{formData.industry || 'Not provided'}</p>
+                        </div>
                     </div>
                 </div>
             </div>
