@@ -36,10 +36,14 @@ const ReviewStep: React.FC = () => {
                 </div>
             </div>
 
-            <div className="bg-yellow-50 p-4 rounded-md border border-yellow-100">
-                <p className="text-yellow-800 text-sm">
-                    <strong>Note:</strong> In the next version, clicking "Finish" will generate your custom checklist based on these answers.
-                </p>
+            <div className="bg-amber-50 p-4 rounded-xl border border-amber-100 flex items-start gap-3">
+                <div className="text-amber-600 mt-0.5"><CheckCircle2 className="w-5 h-5" /></div>
+                <div>
+                    <p className="text-amber-800 font-semibold text-sm mb-1">Preview Mode</p>
+                    <p className="text-amber-700 text-sm leading-relaxed">
+                        Clicking "Finish" will generate your custom checklist based on these answers. No data is sent to any server.
+                    </p>
+                </div>
             </div>
         </div>
     );
