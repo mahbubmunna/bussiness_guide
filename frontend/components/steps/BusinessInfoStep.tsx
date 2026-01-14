@@ -28,6 +28,7 @@ const BusinessInfoStep: React.FC = () => {
                         className="mt-1 block w-full rounded-lg border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3 border transition-colors hover:border-blue-300"
                         placeholder="My Awesome Company"
                     />
+                    <p className="mt-1 text-xs text-slate-400 font-medium">The legal name you will use for registration documents.</p>
                 </div>
 
                 <div>
