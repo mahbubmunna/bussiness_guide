@@ -49,7 +49,7 @@ const IntroStep: React.FC = () => {
 
             <p className="text-xs text-slate-400 font-medium">
                 <span className="inline-block w-2 h-2 bg-emerald-400 rounded-full mr-2"></span>
-                100% Offline & Private. No data leaves your device.
+                You can trust us with your business information.
             </p>
         </div>
     );
