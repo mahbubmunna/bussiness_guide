@@ -50,10 +50,12 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                     <button
                         onClick={nextStep}
                         disabled={currentStep === totalSteps - 1}
-                        className="flex items-center gap-2 px-8 py-2.5 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-blue-500/30 active:scale-[0.98]"
+                        className="flex items-center gap-2 pl-8 pr-6 py-3.5 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 active:scale-[0.98] active:shadow-none transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group"
                     >
-                        {currentStep === totalSteps - 1 ? 'Finish' : 'Next'}
-                        <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+                        <span className="tracking-wide">{currentStep === totalSteps - 1 ? 'Finish' : 'Next'}</span>
+                        <div className="bg-white/20 p-1.5 rounded-full group-hover:bg-white/30 transition-colors">
+                            <ArrowRight className="w-4 h-4" strokeWidth={3} />
+                        </div>
                     </button>
                 </div>
             </div>
