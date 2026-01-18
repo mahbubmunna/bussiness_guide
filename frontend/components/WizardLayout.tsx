@@ -39,13 +39,13 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                     <button
                         onClick={prevStep}
                         disabled={currentStep === 0}
-                        className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold transition-all duration-200 ${currentStep === 0
-                            ? 'bg-slate-100 text-slate-300 cursor-not-allowed'
-                            : 'bg-white border-2 border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 shadow-sm hover:shadow'
+                        className={`flex items-center gap-2 px-6 py-3.5 rounded-full font-bold transition-all duration-300 ${currentStep === 0
+                            ? 'bg-slate-50 text-slate-300 cursor-not-allowed hidden'
+                            : 'bg-white border text-slate-600 border-slate-200 hover:border-slate-800 hover:text-slate-900 hover:bg-slate-50'
                             }`}
                     >
                         <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
-                        Back
+                        <span className="tracking-wide">Back</span>
                     </button>
                     <button
                         onClick={nextStep}
