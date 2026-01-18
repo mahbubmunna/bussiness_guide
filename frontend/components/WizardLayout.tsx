@@ -24,9 +24,13 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
                         <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
                     </div>
                 </div>
-                <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-white/50 backdrop-blur-sm">
-                    <h1 className="text-xl font-bold text-slate-800 tracking-tight">Business Setup Assistant</h1>
-                    <span className="text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Step {currentStep + 1} / {totalSteps}</span>
+                <div className="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-10">
+                    <h1 className="text-xl font-bold text-slate-800 tracking-tight flex items-center gap-2">
+                        Business Setup
+                        <span className="text-slate-300 font-light">|</span>
+                        <span className="text-blue-600">Assistant</span>
+                    </h1>
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">Step {currentStep + 1} of {totalSteps}</span>
                 </div>
 
                 {/* Content */}
