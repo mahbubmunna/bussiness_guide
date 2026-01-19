@@ -13,8 +13,9 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({ children }) => {
     const progress = ((currentStep + 1) / totalSteps) * 100;
 
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col items-center py-12 px-4 sm:px-6 font-sans">
-            <div className="w-full max-w-3xl bg-white shadow-2xl shadow-slate-200/50 rounded-3xl overflow-hidden border border-slate-100">
+        <div className="min-h-screen bg-slate-50 flex flex-col items-center py-12 px-4 sm:px-6 font-sans relative">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] mask-image-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+            <div className="w-full max-w-3xl bg-white shadow-2xl shadow-slate-200/50 rounded-3xl overflow-hidden border border-slate-100 relative z-10">
                 {/* Header / Progress */}
                 <div className="bg-slate-100 h-2 w-full relative">
                     <div
