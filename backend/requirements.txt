@@ -5,3 +5,5 @@ pydantic>=2.5.0
 python-multipart
 emails
 jinja2
+pytest>=7.4.0
+httpx>=0.24.0
